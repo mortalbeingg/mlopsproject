@@ -2,6 +2,17 @@ import os
 from pathlib import Path
 import logging
 
+# workflows folder: in this we are going to write
+# the entire configuration of continuous integration(CI)
+# continuous deployment(CD)
+# we have stored a .gitkeep file inside this folder
+# because github wont reflect the folder(.github folder as it is hidden) that
+# is empty on its site when we run template.py and push the changes
+# init_setup.sh : to intitalize the setup
+# tox.ini : it is for testing diff cases
+# in our local development environment
+
+
 list_of_files = [
     ".github/workflows/.gitkeep",
     "src/__init__.py",

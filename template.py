@@ -23,7 +23,7 @@ list_of_files = [
     "src/pipeline/training_pipeline.py",
     "src/pipeline/prediction_pipeline.py",
     "src/utils/utils.py",
-    "src/logger/logging.py",
+    "src/logger/logger.py",
     "src/exception/exception.py",
     "test/unit/__init__.py",
     "test/integration/__init__.py",

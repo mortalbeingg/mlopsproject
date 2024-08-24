@@ -28,5 +28,29 @@ def load_object(filepath):
         logging.info('exception occured in loading the object')
         raise customexception(e,sys)
     
+def evaluate_model(X_train,y_train,X_test,y_test,models):
+    try:
+        test_r2scores = {}
+        for i in range(len(models)):
+            model = list(models.values())[i]
+            
+            # fit the training data
+            model.fit(X_train,y_train)
+            # prediction
+            ytestpred = model.predict(X_test)
+            
+            testdata_score = r2_score(y_test,ytestpred)
+            
+            test_r2scores[list(models.keys())[i]] = testdata_score
+            
+        return test_r2scores
+    
+    except Exception as e:
+        logging.info("Exception occured during model training")
+        raise customexception(e,sys)
+    
+
+            
+    
 
     
